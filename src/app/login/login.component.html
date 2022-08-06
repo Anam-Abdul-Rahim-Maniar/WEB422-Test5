@@ -1,0 +1,8 @@
+<p>{{message}}</p>
+<form (ngSubmit)="onSubmit()">
+    <p>user name:</p>
+    <input type="text" name="userName" [(ngModel)]="user.userName">
+    <p>password:</p>
+    <input type="password" name="password" [(ngModel)]="user.password">
+    <button type="submit"> Login </button>
+</form>

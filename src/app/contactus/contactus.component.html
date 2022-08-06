@@ -1,0 +1,10 @@
+<p>{{message}}</p>
+<form (ngSubmit)="onSubmit()">
+    <p>Full Name:</p>
+    <input type="text" name="fullName" [(ngModel)]="contactUser.fullName">
+    <p>Email:</p>
+    <input type="email" name="email" [(ngModel)]="contactUser.email">
+    <p>Message:</p>
+    <input type="text" name="message" [(ngModel)]="contactUser.message">
+    <button type="submit"> Submit </button>
+</form>
