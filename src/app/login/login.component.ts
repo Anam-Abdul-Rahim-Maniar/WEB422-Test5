@@ -21,8 +21,13 @@ export class LoginComponent implements OnInit {
     if(this.user.password !== "" && this.user.userName !== ""){
       const pattern = /[^A-Za-z0-9]+/;
       if(!pattern.test(this.user.password) && !pattern.test(this.user.userName)){
-        this.message="";
-        this.route.navigate(['/contactus'])
+        if(this.user.password === "myPassword" && this.user.userName === "bob"){
+          this.message = "";
+        this.route.navigate(['/contactus']);
+        }
+        else{
+          this.message = "unregistered user";
+        }
       }
       else{
         this.message = "password and username must contain only numbers and letters";
@@ -37,3 +42,5 @@ export class LoginComponent implements OnInit {
   }
 
 }
+
+//https://62edc2b9ba5a2260ce3c3523--illustrious-taffy-10d9a2.netlify.app/
